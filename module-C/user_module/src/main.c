@@ -7,7 +7,7 @@ void initialize_decl_cond();
 void message_submission_fun(long long session_id, void* message); 
 int main(void)
 {
-    //³õÊ¼»¯
+    //åˆå§‹åŒ–
     Config* config = load_config("config.cfg");
     if (!initialize(hash("user_module"),
         find_config(config, "address"),
@@ -15,7 +15,7 @@ int main(void)
         return 0;
     }
     initialize_decl_cond();
-    //³õÊ¼»¯Êı¾İ¿â
+    //åˆå§‹åŒ–æ•°æ®åº“
     init_store_data("UserStoreData", user_store_data_decl);
     accept_message(message_submission_cond, user_information_decl, sizeof(UserInformation), message_submission_fun);
 }
